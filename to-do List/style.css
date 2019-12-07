@@ -1,1 +1,258 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+.container {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .todoParent {
+  width: 400px;
+  height: 90%;
+  padding: 10px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.container .todoParent .addTodoParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .todoParent .addTodoParent input,
+.container .todoParent .addTodoParent button {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid black;
+  outline: none;
+}
+
+.container .todoParent .addTodoParent input {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.container .todoParent .addTodoParent input::-webkit-input-placeholder {
+  color: #0000005a;
+}
+
+.container .todoParent .addTodoParent input:-ms-input-placeholder {
+  color: #0000005a;
+}
+
+.container .todoParent .addTodoParent input::-ms-input-placeholder {
+  color: #0000005a;
+}
+
+.container .todoParent .addTodoParent input::placeholder {
+  color: #0000005a;
+}
+
+.container .todoParent .addTodoParent .button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.container .todoParent .addTodoParent .button button {
+  background: none;
+  position: absolute;
+  top: 80%;
+  left: 70%;
+  -webkit-transform: translate(-61%, -50%);
+          transform: translate(-61%, -50%);
+  -webkit-box-shadow: 4px 4px 0 0 #bdbdbd;
+          box-shadow: 4px 4px 0 0 #bdbdbd;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  width: 50px;
+}
+
+.container .todoParent .addTodoParent .button button .fa {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.container .todoParent .addTodoParent .button button:focus {
+  -webkit-transform: translate(-55%, -45%);
+          transform: translate(-55%, -45%);
+  -webkit-box-shadow: 2px 2px 0 0 #000000;
+          box-shadow: 2px 2px 0 0 #000000;
+}
+
+.container .todoParent h4 {
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.container .todoParent h4 span {
+  cursor: pointer;
+  color: gray;
+  border-bottom: 1px solid gray;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.container .todoParent h4 span i {
+  color: gray;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.container .todoParent h4 span:hover {
+  color: black;
+  border-bottom: 1px solid white;
+}
+
+.container .todoParent h4 span:hover i {
+  color: black;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.container .todoParent .todos {
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.container .todoParent .todos::-webkit-scrollbar {
+  width: 3px;
+  height: 0px;
+}
+
+.container .todoParent .todos::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.container .todoParent .todos::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+.container .todoParent .todos * {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .todoParent .todos .todo_parent {
+  margin: 5px 0;
+  background: #eef;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container .todoParent .todos .todo_parent:hover {
+  background: #cdd;
+}
+
+.container .todoParent .todos .todo_parent .todo {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .todoParent .todos .todo_parent .todo .checkbox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.container .todoParent .todos .todo_parent .todo span {
+  -webkit-box-flex: 12;
+      -ms-flex: 12;
+          flex: 12;
+}
+
+.container .todoParent .todos .todo_parent .todo button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.container .settings {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100000;
+  width: 300px;
+  height: 0;
+  overflow-y: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background: #eee;
+}
+
+.container .settings .setting_parent {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.container .settings .setting_parent .setting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #eef;
+}
+
+.container .settings .setting_parent .setting p {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+  text-align: right;
+  margin: 0;
+  padding: 5px;
+}
+/*# sourceMappingURL=style.css.map */
