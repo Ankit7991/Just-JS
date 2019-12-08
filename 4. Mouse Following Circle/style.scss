@@ -1,0 +1,33 @@
+.cursorCircle{
+  position: fixed;
+  background: rgba(255, 0, 0, 0.199);
+  // background: transparent;
+  z-index: 10000;
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  animation: shape 05s infinite ease-in-out;
+  transform: translate(-50%, -50%);
+  // transition: 0.1s;
+  @keyframes shape {
+    50%{
+      transform: translate(-50%, -50%) rotate(180deg) skew(10deg);
+      // border-radius: 10%;
+    }
+    50.0001%{
+      transform: translate(-50%, -50%) rotate(0deg) skew(10deg);
+      // border-radius: 10%;
+    }
+    99.99%{
+      transform: translate(-50%, -50%) rotate(180deg) skew(-10deg);
+      // border-radius: 100%;
+    }
+    100%{
+      transform: translate(-50%, -50%) rotate(0deg) skew(-10deg);
+      // border-radius: 100%;
+    }
+  }
+}
+
+

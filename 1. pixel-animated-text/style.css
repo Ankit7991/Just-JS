@@ -23,19 +23,31 @@ body {
           align-items: center;
 }
 
+.container #writeThis {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 16px;
+  margin: 10px;
+}
+
 .container .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  border: 1px solid red;
 }
 
 .container .text .letter {
@@ -56,7 +68,7 @@ body {
 }
 
 .container .text .letter .visiblePixel {
-  background: #e6e6e6;
+  background: white;
   margin: 0;
 }
 
@@ -65,17 +77,26 @@ body {
 }
 
 @-webkit-keyframes pixelAnimation {
-  10% {
+  0% {
+    background: red;
+  }
+  30% {
     background: red;
     opacity: 0.1;
-    -webkit-transform: translate(-100%) scale(1.3);
-            transform: translate(-100%) scale(1.3);
+    -webkit-transform: translate(-100%, -200%) scale(1.9);
+            transform: translate(-100%, -200%) scale(1.9);
+  }
+  31% {
+    background: green;
   }
   50% {
     opacity: 0.6;
     background: green;
-    -webkit-transform: translate(100%, -100%) scale(0.7);
-            transform: translate(100%, -100%) scale(0.7);
+    -webkit-transform: translate(100%, 200%) scale(1.7);
+            transform: translate(100%, 200%) scale(1.7);
+  }
+  51% {
+    background: orange;
   }
   80% {
     opacity: 0.8;
@@ -92,17 +113,26 @@ body {
 }
 
 @keyframes pixelAnimation {
-  10% {
+  0% {
+    background: red;
+  }
+  30% {
     background: red;
     opacity: 0.1;
-    -webkit-transform: translate(-100%) scale(1.3);
-            transform: translate(-100%) scale(1.3);
+    -webkit-transform: translate(-100%, -200%) scale(1.9);
+            transform: translate(-100%, -200%) scale(1.9);
+  }
+  31% {
+    background: green;
   }
   50% {
     opacity: 0.6;
     background: green;
-    -webkit-transform: translate(100%, -100%) scale(0.7);
-            transform: translate(100%, -100%) scale(0.7);
+    -webkit-transform: translate(100%, 200%) scale(1.7);
+            transform: translate(100%, 200%) scale(1.7);
+  }
+  51% {
+    background: orange;
   }
   80% {
     opacity: 0.8;
